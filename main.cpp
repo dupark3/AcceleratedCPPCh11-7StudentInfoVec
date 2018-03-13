@@ -7,8 +7,8 @@
 
 int main()
 {
-    std::vector<Student_info> students;
-    Student_info record; // default constructor called
+    Vec<Student_info> students;
+    Student_info record;
     std::string::size_type maxLen = 0;
 
     // read using member function read and store the data as class objects into vector students
@@ -24,7 +24,7 @@ int main()
     std::sort(students.begin(), students.end(), compare);
 
     // write the names and grades of students
-    for (std::vector<Student_info>::size_type i = 0; i != students.size(); ++i){
+    for (Vec<Student_info>::size_type i = 0; i != students.size(); ++i){
         std::streamsize prec = std::cout.precision();
         std::cout << students[i].name() << std::string(maxLen + 1 - students[i].name().size(), ' ')
                   << std::setprecision(3) << students[i].showFinalGrade()
