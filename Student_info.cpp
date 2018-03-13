@@ -8,7 +8,7 @@
 #include "Student_info.h"
 
 // constructors
-Student_info::Student_info() : midterm(0), final(0) { }; // default, no arguments
+Student_info::Student_info() : midterm(0), final(0), finalGrade(0) { }; // default, no arguments
 Student_info::Student_info(std::istream& is) { read(is); }; // with arguments
 
 
@@ -25,8 +25,10 @@ std::istream& read_hw(std::istream& is, std::vector<double>& homework){
     if (is){
         homework.clear();
         double x;
-        while(is >> x)
+        while(is >> x){
             homework.push_back(x);
+        }
+
     is.clear();
     }
     return is;
