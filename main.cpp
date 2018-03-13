@@ -4,6 +4,7 @@
 #include <string>
 
 #include "Student_info.h"
+#include "Vec.h"
 
 int main()
 {
